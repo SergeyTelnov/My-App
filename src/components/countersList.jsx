@@ -17,16 +17,21 @@ const CountersList = () => {
   const handleReset = () => {
     setCounters(initialState)
   }
-  const handleIncrement = (item) => {
+  const handleIncrement = (id) => {
+    console.log(id);
     const newValue = counters.map((el) => {
-      const value = el.id === item.id ? el.value = el.value + 1 : 0
+      if (el.id === id) {
+        el.value = el.value + 1
+      }
       return el
     })
     setCounters(newValue)
   }
-  const handleDecrement = (item) => {
+  const handleDecrement = (id) => {
     const newValue = counters.map((el) => {
-      const value = el.id === item.id ? el.value = el.value - 1 : 0
+      if (el.id === id) {
+        el.value = el.value - 1
+      }
       return el
     })
     setCounters(newValue)

@@ -18,13 +18,13 @@ const Counter = (props) => {
         <span className = {getBadgeClasses()}>{formatValue()}</span>
         <button 
           className = "btn btn-primary btn-sm m-2" 
-          onClick = {() => props.onIncrement(props)}
+          onClick = {() => props.onIncrement(props.id)}
         >
           +
         </button>
         <button 
           className = "btn btn-primary btn-sm m-2" 
-          onClick = {() => props.onDecrement(props)}
+          onClick = {() => props.onDecrement(props.id)}
         >
           -
         </button>
